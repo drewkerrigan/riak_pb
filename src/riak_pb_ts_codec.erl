@@ -125,9 +125,7 @@ decode_cells(Cells) ->
 
 -spec encode_row(list(tscolumntype()), list(ldbvalue())) -> #tsrow{}.
 encode_row(ColumnTypes, RowCells) when length(ColumnTypes) =:= length(RowCells) ->
-    #tsrow{cells = [encode_cell(ColumnTypeCell) || ColumnTypeCell <- lists:zip(ColumnTypes, RowCells)]};
-encode_row(_ColumnTypes, [[]]) ->
-    #tsrow{}.
+    #tsrow{cells = [encode_cell(ColumnTypeCell) || ColumnTypeCell <- lists:zip(ColumnTypes, RowCells)]}.
 
 %% @doc Only for encoding rows for PUTs on the erlang client.
 %%      Will not properly encode timestamp #tscell{} records,
