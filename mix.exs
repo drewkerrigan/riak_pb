@@ -7,13 +7,12 @@ defmodule RiakPb.Mixfile do
     [app: :riak_pb,
      version: @version,
      description: "Riak Protocol Buffers Messages",
-     package: package,
-     deps: deps]
+     package: package(),
+     deps: deps()]
   end
 
   defp deps do
     [
-      {:protobuffs, "~> 0.8"},
       {:hamcrest, "~> 0.1"}
     ]
   end
