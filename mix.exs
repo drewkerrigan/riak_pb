@@ -13,7 +13,8 @@ defmodule RiakPb.Mixfile do
 
   defp deps do
     [
-      {:hamcrest, "~> 0.1"}
+      {:hamcrest, "~> 0.1"},
+      {:ex_doc, ">= 0.0.0", only: :dev}
     ]
   end
 
